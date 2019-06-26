@@ -22,4 +22,4 @@ find_package(nlohmann_json REQUIRED)
 find_package(csecore REQUIRED)
 
 
-add_subdirectory(src)
+add_subdirectory(app)
