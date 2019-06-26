@@ -26,5 +26,7 @@ int main()
     cse_execution* execution = cse_execution_create(to_cse_time_point(0.0), to_cse_duration(1.0 / 100));
     cse_execution_destroy(execution);
 
+    std::cout << "success" << std::endl;
+
     return 0;
 }
