@@ -2,7 +2,7 @@
 from conans import ConanFile, CMake
 
 
-class CsecorejniConan(ConanFile):
+class CseconsumerConan(ConanFile):
 
     settings = "os", "compiler", "build_type", "arch"
     generators = "cmake"
