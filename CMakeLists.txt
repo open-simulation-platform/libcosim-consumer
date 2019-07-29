@@ -12,13 +12,6 @@ else()
     message(FATAL_ERROR "The file conanbuildinfo.cmake doesn't exist, you have to run conan install first!")
 endif()
 
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-
-find_package(GSL REQUIRED)
-find_package(Boost REQUIRED COMPONENTS date_time fiber filesystem log)
-find_package(FMILibrary REQUIRED)
-find_package(LIBZIP REQUIRED)
-find_package(nlohmann_json REQUIRED)
 find_package(csecore REQUIRED)
 
 add_subdirectory(src)

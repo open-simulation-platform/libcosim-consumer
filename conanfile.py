@@ -8,7 +8,12 @@ class CseconsumerConan(ConanFile):
     generators = "cmake"
 
     requires = (
-        "cse-core/0.3.0@osp/master"
+        "cse-core/0.4.0@markaren/testing"
+    )
+    
+    default_options = (
+        "cse-core:revision=markaren/testing",
+        "cse-core:build_apidoc=False"
     )
 
     def imports(self):
