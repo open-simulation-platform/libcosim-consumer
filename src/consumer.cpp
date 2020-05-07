@@ -3,7 +3,14 @@
 
 #include <cse/algorithm.hpp>
 
-std::shared_ptr<cse::execution> cse::consumer::create_execution()
+namespace cse
 {
-    return std::make_shared<cse::execution>(cse::to_time_point(0.0), std::make_unique<cse::fixed_step_algorithm>(cse::to_duration(1.0 / 100)));
+
+std::shared_ptr<cse::execution> consumer::create_execution()
+{
+    const auto t0 = cse::to_time_point(0.0);
+    auto algorithm = std::make_unique<cse::fixed_step_algorithm>(cse::to_duration(1.0 / 100));
+    return std::make_shared<cse::execution>(t0, std::move(algorithm));
 }
+
+} // namespace cse

@@ -14,6 +14,7 @@ target_include_directories(cseconsumer
         )
 
 target_link_libraries(cseconsumer PRIVATE csecore::csecorecpp)
+target_compile_definitions(cseconsumer PUBLIC "BOOST_CONFIG_SUPPRESS_OUTDATED_MESSAGE=1")
 
 set_target_properties(cseconsumer
         PROPERTIES

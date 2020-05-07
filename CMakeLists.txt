@@ -1,6 +1,6 @@
 
-cmake_minimum_required(VERSION 3.12)
-project(cseconsumer VERSION 0.4.0)
+cmake_minimum_required(VERSION 3.10)
+project(cseconsumer)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
@@ -11,6 +11,8 @@ if(EXISTS ${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 else()
     message(FATAL_ERROR "The file conanbuildinfo.cmake doesn't exist, you have to run conan install first!")
 endif()
+
+add_compile_options("/wd4251")
 
 find_package(csecore REQUIRED)
 
