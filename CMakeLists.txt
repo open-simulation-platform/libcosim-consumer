@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.10)
-project(cseconsumer)
+project(libcosim_consumer)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
@@ -14,7 +14,7 @@ endif()
 
 add_compile_options("/wd4251")
 
-find_package(csecore REQUIRED)
+find_package(libcosim REQUIRED)
 
 add_subdirectory(src)
 add_subdirectory(app)

@@ -5,7 +5,7 @@
 
 int main()
 {
-    auto consumer = cse::consumer();
+    auto consumer = example::consumer();
     auto execution = consumer.create_execution();
 
     std::cout << "success" << std::endl;
