@@ -1,19 +1,21 @@
 
-#ifndef CSECONSUMER_CONSUMER_HPP
-#define CSECONSUMER_CONSUMER_HPP
+#ifndef LIBCOSIM_CONSUMER_CONSUMER_HPP
+#define LIBCOSIM_CONSUMER_CONSUMER_HPP
 
-#include <cse/execution.hpp>
+#include <cosim/execution.hpp>
 
-namespace cse
+#include <memory>
+
+namespace example
 {
 
 class consumer
 {
 
 public:
-    std::shared_ptr<cse::execution> create_execution();
+    std::shared_ptr<cosim::execution> create_execution();
 };
 
-} // namespace cse
+} // namespace example
 
-#endif //CSECONSUMER_CONSUMER_HPP
+#endif //LIBCOSIM_CONSUMER_CONSUMER_HPP
