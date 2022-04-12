@@ -1,5 +1,5 @@
 
-include_directories(../include)
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_library(libcosim_consumer SHARED consumer.cpp)
 add_library(libcosim_consumer::consumer ALIAS libcosim_consumer)

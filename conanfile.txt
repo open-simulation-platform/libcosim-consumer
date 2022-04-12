@@ -1,32 +1,35 @@
 [requires]
-libcosim/0.7.0@osp/v0.7.0
+libcosim/0.9.0@osp/stable
 
 [generators]
 cmake
 
 [options]
-libcosim:fmuproxy=True
+libcosim:proxyfmu=False
 
 [imports]
-lib, boost_atomic*.dll             -> ./bin
-lib, boost_chrono*.dll             -> ./bin
-lib, boost_context*.dll            -> ./bin
-lib, boost_date_time*.dll          -> ./bin
-lib, boost_fiber*.dll              -> ./bin
-lib, boost_filesystem*.dll         -> ./bin
-lib, boost_log*.dll                -> ./bin
-lib, boost_log_setup*.dll          -> ./bin
-lib, boost_program_options*.dll    -> ./bin
-lib, boost_regex*.dll              -> ./bin
-lib, boost_system*.dll             -> ./bin
-lib, boost_thread*.dll             -> ./bin
+bin, boost_atomic*.dll             -> ./bin
+bin, boost_chrono*.dll             -> ./bin
+bin, boost_context*.dll            -> ./bin
+bin, boost_date_time*.dll          -> ./bin
+bin, boost_filesystem*.dll         -> ./bin
+bin, boost_log*.dll                -> ./bin
+bin, boost_log_setup*.dll          -> ./bin
+bin, boost_program_options*.dll    -> ./bin
+bin, boost_regex*.dll              -> ./bin
+bin, boost_system*.dll             -> ./bin
+bin, boost_thread*.dll             -> ./bin
 bin, cosim.dll                     -> ./bin
+bin, fmilib_shared.dll             -> ./bin
+bin, xerces-c*.dll                 -> ./bin
+bin, yaml-cpp.dll                  -> ./bin
+bin, zip.dll                       -> ./bin
+bin, proxyfmu*                     -> ./bin
 
 lib, libboost_atomic.so.*          -> ./lib
 lib, libboost_chrono.so.*          -> ./lib
 lib, libboost_context.so.*         -> ./lib
 lib, libboost_date_time.so.*       -> ./lib
-lib, libboost_fiber.so.*           -> ./lib
 lib, libboost_filesystem.so.*      -> ./lib
 lib, libboost_log.so.*             -> ./lib
 lib, libboost_log_setup.so.*       -> ./lib
@@ -35,3 +38,7 @@ lib, libboost_regex.so.*           -> ./lib
 lib, libboost_system.so.*          -> ./lib
 lib, libboost_thread.so.*          -> ./lib
 lib, libcosim.so                   -> ./lib
+lib, libfmilib_shared.so           -> ./lib
+lib, libxerces-c*.so               -> ./lib
+lib, libyaml-cpp.so.*              -> ./lib
+lib, libzip.so.*                   -> ./lib
